@@ -13,6 +13,7 @@
 		FD70C861225BB682006E3874 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD70C860225BB682006E3874 /* Assets.xcassets */; };
 		FD70C864225BB682006E3874 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD70C862225BB682006E3874 /* LaunchScreen.storyboard */; };
 		FD70C86C225BB7D8006E3874 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70C86B225BB7D8006E3874 /* BaseTabBarController.swift */; };
+		FD70C86F225BD334006E3874 /* AppsSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70C86E225BD334006E3874 /* AppsSearchController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FD70C863225BB682006E3874 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD70C865225BB682006E3874 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD70C86B225BB7D8006E3874 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		FD70C86E225BD334006E3874 /* AppsSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsSearchController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				FD70C859225BB681006E3874 /* AppDelegate.swift */,
 				FD70C85B225BB681006E3874 /* ViewController.swift */,
+				FD70C870225BD33B006E3874 /* Apps Search */,
 				FD70C86D225BB7DF006E3874 /* Tab Bar */,
 				FD70C85D225BB681006E3874 /* Main.storyboard */,
 				FD70C860225BB682006E3874 /* Assets.xcassets */,
@@ -73,6 +76,14 @@
 				FD70C86B225BB7D8006E3874 /* BaseTabBarController.swift */,
 			);
 			path = "Tab Bar";
+			sourceTree = "<group>";
+		};
+		FD70C870225BD33B006E3874 /* Apps Search */ = {
+			isa = PBXGroup;
+			children = (
+				FD70C86E225BD334006E3874 /* AppsSearchController.swift */,
+			);
+			path = "Apps Search";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +160,7 @@
 				FD70C85C225BB681006E3874 /* ViewController.swift in Sources */,
 				FD70C85A225BB681006E3874 /* AppDelegate.swift in Sources */,
 				FD70C86C225BB7D8006E3874 /* BaseTabBarController.swift in Sources */,
+				FD70C86F225BD334006E3874 /* AppsSearchController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
