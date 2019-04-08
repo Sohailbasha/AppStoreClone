@@ -12,6 +12,9 @@ class VerticalStackView: UIStackView {
     
     init(arrangedSubViews: [UIView], spacing: CGFloat = 0.0) {
         super.init(frame: .zero) // we are using autolayout so this will be ignored
+        
+        arrangedSubViews.forEach({addArrangedSubview($0)})
+        
         self.spacing = spacing
         self.axis = .vertical
     }
