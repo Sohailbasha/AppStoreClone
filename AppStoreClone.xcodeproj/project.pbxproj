@@ -15,6 +15,7 @@
 		FD70C86C225BB7D8006E3874 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70C86B225BB7D8006E3874 /* BaseTabBarController.swift */; };
 		FD70C86F225BD334006E3874 /* AppsSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70C86E225BD334006E3874 /* AppsSearchController.swift */; };
 		FD70C872225BD717006E3874 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70C871225BD717006E3874 /* SearchResultCell.swift */; };
+		FD70C874225BDDA1006E3874 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70C873225BDDA1006E3874 /* UIView+Layout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FD70C86B225BB7D8006E3874 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		FD70C86E225BD334006E3874 /* AppsSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsSearchController.swift; sourceTree = "<group>"; };
 		FD70C871225BD717006E3874 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		FD70C873225BDDA1006E3874 /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				FD70C859225BB681006E3874 /* AppDelegate.swift */,
 				FD70C85B225BB681006E3874 /* ViewController.swift */,
+				FD70C875225BDDA6006E3874 /* Helpers */,
 				FD70C870225BD33B006E3874 /* Apps Search */,
 				FD70C86D225BB7DF006E3874 /* Tab Bar */,
 				FD70C85D225BB681006E3874 /* Main.storyboard */,
@@ -84,9 +87,25 @@
 			isa = PBXGroup;
 			children = (
 				FD70C86E225BD334006E3874 /* AppsSearchController.swift */,
-				FD70C871225BD717006E3874 /* SearchResultCell.swift */,
+				FD70C876225BDE3E006E3874 /* Views */,
 			);
 			path = "Apps Search";
+			sourceTree = "<group>";
+		};
+		FD70C875225BDDA6006E3874 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FD70C873225BDDA1006E3874 /* UIView+Layout.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FD70C876225BDE3E006E3874 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FD70C871225BD717006E3874 /* SearchResultCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +181,7 @@
 			files = (
 				FD70C85C225BB681006E3874 /* ViewController.swift in Sources */,
 				FD70C85A225BB681006E3874 /* AppDelegate.swift in Sources */,
+				FD70C874225BDDA1006E3874 /* UIView+Layout.swift in Sources */,
 				FD70C86C225BB7D8006E3874 /* BaseTabBarController.swift in Sources */,
 				FD70C86F225BD334006E3874 /* AppsSearchController.swift in Sources */,
 				FD70C872225BD717006E3874 /* SearchResultCell.swift in Sources */,
