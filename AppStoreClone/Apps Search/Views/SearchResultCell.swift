@@ -10,7 +10,7 @@ import UIKit
 
 class SearchResultCell: UICollectionViewCell {
     
-    let imageView: UIImageView = {
+    let appIconImageView: UIImageView = {
         let iv = UIImageView()
         iv.backgroundColor = .red
         iv.widthAnchor.constraint(equalToConstant: 64).isActive = true
@@ -43,6 +43,8 @@ class SearchResultCell: UICollectionViewCell {
         button.setTitleColor(.blue, for: .normal)
         button.titleLabel?.font = .boldSystemFont(ofSize: 14)
         button.widthAnchor.constraint(equalToConstant: 80).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 32).isActive = true
+        button.layer.cornerRadius = 16
         button.backgroundColor = .white
     
         return button
@@ -50,27 +52,26 @@ class SearchResultCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = .yellow
         
         let labelsStackView = UIStackView(arrangedSubviews: [nameLabel, categoryLabel, ratingsLabel])
         labelsStackView.axis = .vertical
         
-        let horizontalStackView = UIStackView(arrangedSubviews: [imageView,
+        let horizontalStackView = UIStackView(arrangedSubviews: [appIconImageView,
                                                        labelsStackView,
                                                        getButton])
         horizontalStackView.alignment = .center
-        // subviews perpendicular to stackview will be centered.
-        // imageview will need a heightanchor so that it won't be squished (since height is not defined)
-        
         horizontalStackView.spacing = 12
         
         addSubview(horizontalStackView)
         horizontalStackView.translatesAutoresizingMaskIntoConstraints = false
+        
         horizontalStackView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         horizontalStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        horizontalStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-        horizontalStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         
-        backgroundColor = .yellow
+        horizontalStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16).isActive = true
+        horizontalStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16).isActive = true
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
