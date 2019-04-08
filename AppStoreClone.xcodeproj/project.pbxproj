@@ -14,6 +14,7 @@
 		FD70C864225BB682006E3874 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD70C862225BB682006E3874 /* LaunchScreen.storyboard */; };
 		FD70C86C225BB7D8006E3874 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70C86B225BB7D8006E3874 /* BaseTabBarController.swift */; };
 		FD70C86F225BD334006E3874 /* AppsSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70C86E225BD334006E3874 /* AppsSearchController.swift */; };
+		FD70C872225BD717006E3874 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70C871225BD717006E3874 /* SearchResultCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FD70C865225BB682006E3874 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD70C86B225BB7D8006E3874 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		FD70C86E225BD334006E3874 /* AppsSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsSearchController.swift; sourceTree = "<group>"; };
+		FD70C871225BD717006E3874 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				FD70C86E225BD334006E3874 /* AppsSearchController.swift */,
+				FD70C871225BD717006E3874 /* SearchResultCell.swift */,
 			);
 			path = "Apps Search";
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 				FD70C85A225BB681006E3874 /* AppDelegate.swift in Sources */,
 				FD70C86C225BB7D8006E3874 /* BaseTabBarController.swift in Sources */,
 				FD70C86F225BD334006E3874 /* AppsSearchController.swift in Sources */,
+				FD70C872225BD717006E3874 /* SearchResultCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
