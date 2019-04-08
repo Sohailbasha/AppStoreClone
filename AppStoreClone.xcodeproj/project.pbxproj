@@ -16,6 +16,7 @@
 		FD70C86F225BD334006E3874 /* AppsSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70C86E225BD334006E3874 /* AppsSearchController.swift */; };
 		FD70C872225BD717006E3874 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70C871225BD717006E3874 /* SearchResultCell.swift */; };
 		FD70C874225BDDA1006E3874 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70C873225BDDA1006E3874 /* UIView+Layout.swift */; };
+		FD70C878225BE60C006E3874 /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70C877225BE60C006E3874 /* VerticalStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		FD70C86E225BD334006E3874 /* AppsSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsSearchController.swift; sourceTree = "<group>"; };
 		FD70C871225BD717006E3874 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		FD70C873225BDDA1006E3874 /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
+		FD70C877225BE60C006E3874 /* VerticalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				FD70C873225BDDA1006E3874 /* UIView+Layout.swift */,
+				FD70C877225BE60C006E3874 /* VerticalStackView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				FD70C86C225BB7D8006E3874 /* BaseTabBarController.swift in Sources */,
 				FD70C86F225BD334006E3874 /* AppsSearchController.swift in Sources */,
 				FD70C872225BD717006E3874 /* SearchResultCell.swift in Sources */,
+				FD70C878225BE60C006E3874 /* VerticalStackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
