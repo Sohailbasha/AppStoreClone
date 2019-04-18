@@ -51,27 +51,8 @@ class AppsSearchController: UICollectionViewController {
         }
         
         let appResult = appResults[indexPath.item] // recomended by apple
-        cell.nameLabel.text = appResult.trackName
-        cell.categoryLabel.text = appResult.primaryGenreName
-        if let rating = appResult.averageUserRating {
-            cell.ratingsLabel.text = "\(rating)"
-        } else {
-            cell.ratingsLabel.text = " "
-        }
+        cell.appResult = appResult
         
-        let url = URL(string: appResult.artworkUrl100)
-        cell.appIconImageView.sd_setImage(with: url, completed: nil)
-        
-        cell.screenshot1.sd_setImage(with: URL(string: appResult.screenshotUrls[0]), completed: nil)
-
-        if appResult.screenshotUrls.count > 1 {
-            cell.screenshot2.sd_setImage(with: URL(string: appResult.screenshotUrls[1]), completed: nil)
-        }
-        
-        if appResult.screenshotUrls.count > 2 {
-            cell.screenshot3.sd_setImage(with: URL(string: appResult.screenshotUrls[2]), completed: nil)
-        }
-
         return cell
     }
     

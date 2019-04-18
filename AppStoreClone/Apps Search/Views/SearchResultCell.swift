@@ -11,6 +11,33 @@ import SDWebImage
 
 class SearchResultCell: UICollectionViewCell {
     
+    var appResult: Result? {
+        didSet {
+            if let appResult = appResult {
+                self.nameLabel.text = appResult.trackName
+                self.categoryLabel.text = appResult.primaryGenreName
+                
+                if let rating = appResult.averageUserRating {
+                    self.ratingsLabel.text = "\(rating)"
+                } else {
+                    self.ratingsLabel.text = " "
+                }
+                
+                self.appIconImageView.sd_setImage(with: URL(string: appResult.artworkUrl100), completed: nil)
+                self.screenshot1.sd_setImage(with: URL(string: appResult.screenshotUrls[0]), completed: nil)
+                
+                if appResult.screenshotUrls.count > 1 {
+                    self.screenshot2.sd_setImage(with: URL(string: appResult.screenshotUrls[1]), completed: nil)
+                }
+                
+                if appResult.screenshotUrls.count > 2 {
+                    self.screenshot3.sd_setImage(with: URL(string: appResult.screenshotUrls[2]), completed: nil)
+                }
+
+            }
+        }
+    }
+    
     let appIconImageView: UIImageView = {
         let iv = UIImageView()
         iv.backgroundColor = .red
