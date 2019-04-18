@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD0BFF222268F3EB00D7220B /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0BFF212268F3EB00D7220B /* SearchResult.swift */; };
 		FD70C85A225BB681006E3874 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70C859225BB681006E3874 /* AppDelegate.swift */; };
 		FD70C85C225BB681006E3874 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70C85B225BB681006E3874 /* ViewController.swift */; };
 		FD70C85F225BB681006E3874 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD70C85D225BB681006E3874 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FD0BFF212268F3EB00D7220B /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		FD70C856225BB681006E3874 /* AppStoreClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD70C859225BB681006E3874 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD70C85B225BB681006E3874 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD0BFF232268F41600D7220B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FD0BFF212268F3EB00D7220B /* SearchResult.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		FD70C84D225BB681006E3874 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +76,7 @@
 			children = (
 				FD70C859225BB681006E3874 /* AppDelegate.swift */,
 				FD70C85B225BB681006E3874 /* ViewController.swift */,
+				FD0BFF232268F41600D7220B /* Model */,
 				FD70C875225BDDA6006E3874 /* Helpers */,
 				FD70C870225BD33B006E3874 /* Apps Search */,
 				FD70C86D225BB7DF006E3874 /* Tab Bar */,
@@ -184,6 +195,7 @@
 			files = (
 				FD70C85C225BB681006E3874 /* ViewController.swift in Sources */,
 				FD70C85A225BB681006E3874 /* AppDelegate.swift in Sources */,
+				FD0BFF222268F3EB00D7220B /* SearchResult.swift in Sources */,
 				FD70C874225BDDA1006E3874 /* UIView+Layout.swift in Sources */,
 				FD70C86C225BB7D8006E3874 /* BaseTabBarController.swift in Sources */,
 				FD70C86F225BD334006E3874 /* AppsSearchController.swift in Sources */,

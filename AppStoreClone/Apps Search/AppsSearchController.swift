@@ -16,8 +16,10 @@ class AppsSearchController: UICollectionViewController {
         super.viewDidLoad()
         collectionView.backgroundColor = .white
         collectionView.register(SearchResultCell.self, forCellWithReuseIdentifier: cellId)
-//        fetchItunesApps()
+        fetchItunesApps()
     }
+    
+    fileprivate var appResults = [Result]()
     
     init() {
         super.init(collectionViewLayout: UICollectionViewFlowLayout())
@@ -26,6 +28,9 @@ class AppsSearchController: UICollectionViewController {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // 1 - populate cells with itunes api data
+    // 2 - extract function fetchItunesApps() outside of controller file
     
     fileprivate func fetchItunesApps() {
         let urlString = "https://itunes.apple.com/search?term=instagram&entity=software"
@@ -39,7 +44,18 @@ class AppsSearchController: UICollectionViewController {
                 return
             }
             
-            print(String(data: data!, encoding: .utf8))
+            // SUCCESS
+            guard let data = data else {
+                return
+            }
+            
+            do {
+                let searchResult = try JSONDecoder().decode(SearchResult.self, from: data)
+                print(searchResult.resultCount)
+            } catch let jsonError {
+                print("fail to decode json", jsonError)
+            }
+            
         }.resume() // fires off the request
     }
     
