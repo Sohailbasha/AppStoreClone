@@ -29,9 +29,6 @@ class AppsSearchController: UICollectionViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // 1 - populate cells with itunes api data
-    // 2 - extract function fetchItunesApps() outside of controller file
-    
     fileprivate func fetchItunesApps() {
         APIService.sharedInstance.fetchApps { (results, error) in
             
@@ -61,6 +58,20 @@ class AppsSearchController: UICollectionViewController {
         } else {
             cell.ratingsLabel.text = " "
         }
+        
+        let url = URL(string: appResult.artworkUrl100)
+        cell.appIconImageView.sd_setImage(with: url, completed: nil)
+        
+        cell.screenshot1.sd_setImage(with: URL(string: appResult.screenshotUrls[0]), completed: nil)
+
+        if appResult.screenshotUrls.count > 1 {
+            cell.screenshot2.sd_setImage(with: URL(string: appResult.screenshotUrls[1]), completed: nil)
+        }
+        
+        if appResult.screenshotUrls.count > 2 {
+            cell.screenshot3.sd_setImage(with: URL(string: appResult.screenshotUrls[2]), completed: nil)
+        }
+
         return cell
     }
     
