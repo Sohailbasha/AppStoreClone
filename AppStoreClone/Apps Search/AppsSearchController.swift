@@ -27,9 +27,11 @@ class AppsSearchController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as? UICollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as? SearchResultCell else {
             return UICollectionViewCell()
         }
+        
+        cell.nameLabel.text = "Instagram"
         
         return cell
     }
