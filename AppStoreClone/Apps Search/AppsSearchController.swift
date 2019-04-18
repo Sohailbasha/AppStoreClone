@@ -33,33 +33,18 @@ class AppsSearchController: UICollectionViewController {
     // 2 - extract function fetchItunesApps() outside of controller file
     
     fileprivate func fetchItunesApps() {
-        let urlString = "https://itunes.apple.com/search?term=instagram&entity=software"
-        guard let url = URL(string: urlString) else {
-            return
+        APIService.sharedInstance.fetchApps { (results, error) in
+            
+            if let error = error {
+                print("fail to fetch apps", error)
+                return
+            }
+            
+            self.appResults = results
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
         }
-        // fetch data from internet
-        URLSession.shared.dataTask(with: url) { (data, response, err) in
-            if let err = err {
-                print("fail to fetch apps \(err)")
-                return
-            }
-            
-            // SUCCESS
-            guard let data = data else {
-                return
-            }
-            
-            do {
-                let searchResult = try JSONDecoder().decode(SearchResult.self, from: data)
-                self.appResults = searchResult.results
-                DispatchQueue.main.async {
-                    self.collectionView.reloadData()
-                }
-            } catch let jsonError {
-                print("fail to decode json", jsonError)
-            }
-            
-        }.resume() // fires off the request
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -68,10 +53,14 @@ class AppsSearchController: UICollectionViewController {
             return UICollectionViewCell()
         }
         
-        let appResult = appResults[indexPath.row]
+        let appResult = appResults[indexPath.item] // recomended by apple
         cell.nameLabel.text = appResult.trackName
         cell.categoryLabel.text = appResult.primaryGenreName
-        
+        if let rating = appResult.averageUserRating {
+            cell.ratingsLabel.text = "\(rating)"
+        } else {
+            cell.ratingsLabel.text = " "
+        }
         return cell
     }
     
