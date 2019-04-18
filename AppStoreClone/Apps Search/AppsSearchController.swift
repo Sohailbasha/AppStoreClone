@@ -16,6 +16,7 @@ class AppsSearchController: UICollectionViewController {
         super.viewDidLoad()
         collectionView.backgroundColor = .white
         collectionView.register(SearchResultCell.self, forCellWithReuseIdentifier: cellId)
+//        fetchItunesApps()
     }
     
     init() {
@@ -26,13 +27,27 @@ class AppsSearchController: UICollectionViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    fileprivate func fetchItunesApps() {
+        let urlString = "https://itunes.apple.com/search?term=instagram&entity=software"
+        guard let url = URL(string: urlString) else {
+            return
+        }
+        // fetch data from internet
+        URLSession.shared.dataTask(with: url) { (data, response, err) in
+            if let err = err {
+                print("fail to fetch apps \(err)")
+                return
+            }
+            
+            print(String(data: data!, encoding: .utf8))
+        }.resume() // fires off the request
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as? SearchResultCell else {
             return UICollectionViewCell()
         }
-        
         cell.nameLabel.text = "Instagram"
-        
         return cell
     }
     
