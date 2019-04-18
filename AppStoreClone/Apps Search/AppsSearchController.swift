@@ -51,7 +51,10 @@ class AppsSearchController: UICollectionViewController {
             
             do {
                 let searchResult = try JSONDecoder().decode(SearchResult.self, from: data)
-                print(searchResult.resultCount)
+                self.appResults = searchResult.results
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
             } catch let jsonError {
                 print("fail to decode json", jsonError)
             }
@@ -60,15 +63,20 @@ class AppsSearchController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as? SearchResultCell else {
             return UICollectionViewCell()
         }
-        cell.nameLabel.text = "Instagram"
+        
+        let appResult = appResults[indexPath.row]
+        cell.nameLabel.text = appResult.trackName
+        cell.categoryLabel.text = appResult.primaryGenreName
+        
         return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return appResults.count
     }
 }
 
