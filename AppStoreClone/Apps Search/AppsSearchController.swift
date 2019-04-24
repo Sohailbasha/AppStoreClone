@@ -12,13 +12,25 @@ class AppsSearchController: UICollectionViewController {
 
     fileprivate var cellId = "searchCell"
     fileprivate let searchController = UISearchController(searchResultsController: nil)
+    var timer: Timer?
+    
+    fileprivate let enterSearchTermLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Please enter search term above"
+        label.textAlignment = .center
+        label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.textColor = #colorLiteral(red: 0.7369946663, green: 0.7360501969, blue: 0.752547725, alpha: 1)
+        return label
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = .white
         collectionView.register(SearchResultCell.self, forCellWithReuseIdentifier: cellId)
         setupSearchBar()
-        fetchItunesApps()
+        view.addSubview(enterSearchTermLabel)
+        enterSearchTermLabel.fillSuperview()
+//        fetchItunesApps()
     }
     
     fileprivate var appResults = [Result]()
@@ -67,6 +79,7 @@ class AppsSearchController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        enterSearchTermLabel.isHidden = appResults.count != 0
         return appResults.count
     }
 }
@@ -82,17 +95,24 @@ extension AppsSearchController: UICollectionViewDelegateFlowLayout {
 extension AppsSearchController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        APIService.sharedInstance.fetchApps(searchTerm: searchText) { (results, error) in
-            if let error = error {
-                print("fail to fetch apps", error)
-                return
+        
+        // introduce some kind of delay
+        // throttling the search
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { (_) in
+            // fire search
+            APIService.sharedInstance.fetchApps(searchTerm: searchText) { (results, error) in
+                if let error = error {
+                    print("fail to fetch apps", error)
+                    return
+                }
+                
+                self.appResults = results
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
             }
-            
-            self.appResults = results
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
-        }
-        print(searchText)
+        })
+        
     }
 }
