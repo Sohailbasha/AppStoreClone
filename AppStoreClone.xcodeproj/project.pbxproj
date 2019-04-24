@@ -23,6 +23,7 @@
 		FDAED3AC2270C414003B2312 /* AppsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAED3AB2270C414003B2312 /* AppsController.swift */; };
 		FDAED3AF2270C54F003B2312 /* BaseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAED3AE2270C54F003B2312 /* BaseListController.swift */; };
 		FDAED3B22270C794003B2312 /* AppsGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAED3B12270C794003B2312 /* AppsGroupCell.swift */; };
+		FDAED3B42270C997003B2312 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAED3B32270C997003B2312 /* UILabel+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		FDAED3AB2270C414003B2312 /* AppsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsController.swift; sourceTree = "<group>"; };
 		FDAED3AE2270C54F003B2312 /* BaseListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListController.swift; sourceTree = "<group>"; };
 		FDAED3B12270C794003B2312 /* AppsGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsGroupCell.swift; sourceTree = "<group>"; };
+		FDAED3B32270C997003B2312 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 			children = (
 				FD70C873225BDDA1006E3874 /* UIView+Layout.swift */,
 				FD70C877225BE60C006E3874 /* VerticalStackView.swift */,
+				FDAED3B32270C997003B2312 /* UILabel+Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				FD70C86F225BD334006E3874 /* AppsSearchController.swift in Sources */,
 				FD70C872225BD717006E3874 /* SearchResultCell.swift in Sources */,
 				FD0BFF262268F7D800D7220B /* APIService.swift in Sources */,
+				FDAED3B42270C997003B2312 /* UILabel+Extension.swift in Sources */,
 				FD70C878225BE60C006E3874 /* VerticalStackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
