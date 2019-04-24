@@ -20,6 +20,7 @@
 		FD70C872225BD717006E3874 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70C871225BD717006E3874 /* SearchResultCell.swift */; };
 		FD70C874225BDDA1006E3874 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70C873225BDDA1006E3874 /* UIView+Layout.swift */; };
 		FD70C878225BE60C006E3874 /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70C877225BE60C006E3874 /* VerticalStackView.swift */; };
+		FDAED3AC2270C414003B2312 /* AppsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAED3AB2270C414003B2312 /* AppsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		FD70C871225BD717006E3874 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		FD70C873225BDDA1006E3874 /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		FD70C877225BE60C006E3874 /* VerticalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
+		FDAED3AB2270C414003B2312 /* AppsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				FD70C85B225BB681006E3874 /* ViewController.swift */,
 				FD0BFF232268F41600D7220B /* Model */,
 				FD70C875225BDDA6006E3874 /* Helpers */,
+				FDAED3AA2270C3EA003B2312 /* Apps */,
 				FD70C870225BD33B006E3874 /* Apps Search */,
 				FD70C86D225BB7DF006E3874 /* Tab Bar */,
 				FD70C85D225BB681006E3874 /* Main.storyboard */,
@@ -155,6 +158,14 @@
 				FD70C871225BD717006E3874 /* SearchResultCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FDAED3AA2270C3EA003B2312 /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+				FDAED3AB2270C414003B2312 /* AppsController.swift */,
+			);
+			path = Apps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +299,7 @@
 				FD70C85C225BB681006E3874 /* ViewController.swift in Sources */,
 				FD70C85A225BB681006E3874 /* AppDelegate.swift in Sources */,
 				FD0BFF222268F3EB00D7220B /* SearchResult.swift in Sources */,
+				FDAED3AC2270C414003B2312 /* AppsController.swift in Sources */,
 				FD70C874225BDDA1006E3874 /* UIView+Layout.swift in Sources */,
 				FD70C86C225BB7D8006E3874 /* BaseTabBarController.swift in Sources */,
 				FD70C86F225BD334006E3874 /* AppsSearchController.swift in Sources */,
@@ -443,7 +455,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XFHGVA942A;
 				INFOPLIST_FILE = AppStoreClone/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sohail.AppStoreClone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -459,7 +474,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XFHGVA942A;
 				INFOPLIST_FILE = AppStoreClone/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sohail.AppStoreClone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
