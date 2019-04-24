@@ -82,6 +82,17 @@ extension AppsSearchController: UICollectionViewDelegateFlowLayout {
 extension AppsSearchController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        APIService.sharedInstance.fetchApps(searchTerm: searchText) { (results, error) in
+            if let error = error {
+                print("fail to fetch apps", error)
+                return
+            }
+            
+            self.appResults = results
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
         print(searchText)
     }
 }
