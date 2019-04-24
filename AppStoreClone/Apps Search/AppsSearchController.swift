@@ -8,12 +8,13 @@
 
 import UIKit
 
-class AppsSearchController: UICollectionViewController {
+class AppsSearchController: BaseListController {
 
+    fileprivate var appResults = [Result]()
     fileprivate var cellId = "searchCell"
     fileprivate let searchController = UISearchController(searchResultsController: nil)
     var timer: Timer?
-    
+
     fileprivate let enterSearchTermLabel: UILabel = {
         let label = UILabel()
         label.text = "Please enter search term above"
@@ -30,34 +31,9 @@ class AppsSearchController: UICollectionViewController {
         setupSearchBar()
         view.addSubview(enterSearchTermLabel)
         enterSearchTermLabel.fillSuperview()
-//        fetchItunesApps()
     }
     
-    fileprivate var appResults = [Result]()
-    
-    init() {
-        super.init(collectionViewLayout: UICollectionViewFlowLayout())
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    fileprivate func fetchItunesApps() {
-        APIService.sharedInstance.fetchApps(searchTerm: "instagram") { (results, error) in
-            
-            if let error = error {
-                print("fail to fetch apps", error)
-                return
-            }
-            
-            self.appResults = results
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
-        }
-    }
-    
+
     fileprivate func setupSearchBar() {
         definesPresentationContext = true
         navigationItem.searchController = self.searchController
