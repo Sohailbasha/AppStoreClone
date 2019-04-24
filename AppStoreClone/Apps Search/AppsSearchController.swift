@@ -11,11 +11,13 @@ import UIKit
 class AppsSearchController: UICollectionViewController {
 
     fileprivate var cellId = "searchCell"
+    fileprivate let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = .white
         collectionView.register(SearchResultCell.self, forCellWithReuseIdentifier: cellId)
+        setupSearchBar()
         fetchItunesApps()
     }
     
@@ -30,7 +32,7 @@ class AppsSearchController: UICollectionViewController {
     }
     
     fileprivate func fetchItunesApps() {
-        APIService.sharedInstance.fetchApps { (results, error) in
+        APIService.sharedInstance.fetchApps(searchTerm: "instagram") { (results, error) in
             
             if let error = error {
                 print("fail to fetch apps", error)
@@ -42,6 +44,14 @@ class AppsSearchController: UICollectionViewController {
                 self.collectionView.reloadData()
             }
         }
+    }
+    
+    fileprivate func setupSearchBar() {
+        definesPresentationContext = true
+        navigationItem.searchController = self.searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.delegate = self
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -67,4 +77,11 @@ extension AppsSearchController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: view.frame.width, height: 350)
     }
     
+}
+
+extension AppsSearchController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(searchText)
+    }
 }
