@@ -9,20 +9,11 @@
 import Foundation
 import UIKit
 
-class AppsController: UICollectionViewController {
+class AppsController: BaseListController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = .yellow
-    }
-    
-    
-    init() {
-        super.init(collectionViewLayout: UICollectionViewFlowLayout())
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
 }

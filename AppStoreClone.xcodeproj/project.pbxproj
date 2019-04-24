@@ -21,6 +21,7 @@
 		FD70C874225BDDA1006E3874 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70C873225BDDA1006E3874 /* UIView+Layout.swift */; };
 		FD70C878225BE60C006E3874 /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70C877225BE60C006E3874 /* VerticalStackView.swift */; };
 		FDAED3AC2270C414003B2312 /* AppsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAED3AB2270C414003B2312 /* AppsController.swift */; };
+		FDAED3AF2270C54F003B2312 /* BaseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAED3AE2270C54F003B2312 /* BaseListController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		FD70C873225BDDA1006E3874 /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		FD70C877225BE60C006E3874 /* VerticalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
 		FDAED3AB2270C414003B2312 /* AppsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsController.swift; sourceTree = "<group>"; };
+		FDAED3AE2270C54F003B2312 /* BaseListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				FDAED3AA2270C3EA003B2312 /* Apps */,
 				FD70C870225BD33B006E3874 /* Apps Search */,
 				FD70C86D225BB7DF006E3874 /* Tab Bar */,
+				FDAED3AD2270C534003B2312 /* Base Class */,
 				FD70C85D225BB681006E3874 /* Main.storyboard */,
 				FD70C860225BB682006E3874 /* Assets.xcassets */,
 				FD70C862225BB682006E3874 /* LaunchScreen.storyboard */,
@@ -166,6 +169,14 @@
 				FDAED3AB2270C414003B2312 /* AppsController.swift */,
 			);
 			path = Apps;
+			sourceTree = "<group>";
+		};
+		FDAED3AD2270C534003B2312 /* Base Class */ = {
+			isa = PBXGroup;
+			children = (
+				FDAED3AE2270C54F003B2312 /* BaseListController.swift */,
+			);
+			path = "Base Class";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +312,7 @@
 				FD0BFF222268F3EB00D7220B /* SearchResult.swift in Sources */,
 				FDAED3AC2270C414003B2312 /* AppsController.swift in Sources */,
 				FD70C874225BDDA1006E3874 /* UIView+Layout.swift in Sources */,
+				FDAED3AF2270C54F003B2312 /* BaseListController.swift in Sources */,
 				FD70C86C225BB7D8006E3874 /* BaseTabBarController.swift in Sources */,
 				FD70C86F225BD334006E3874 /* AppsSearchController.swift in Sources */,
 				FD70C872225BD717006E3874 /* SearchResultCell.swift in Sources */,
