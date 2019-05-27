@@ -20,6 +20,9 @@
 		FD70C872225BD717006E3874 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70C871225BD717006E3874 /* SearchResultCell.swift */; };
 		FD70C874225BDDA1006E3874 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70C873225BDDA1006E3874 /* UIView+Layout.swift */; };
 		FD70C878225BE60C006E3874 /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70C877225BE60C006E3874 /* VerticalStackView.swift */; };
+		FD92C88D229B5564000EB561 /* AppRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD92C88C229B5564000EB561 /* AppRowCell.swift */; };
+		FD92C88F229B5A0B000EB561 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD92C88E229B5A0B000EB561 /* UIImageView+Extension.swift */; };
+		FD92C891229B5A8C000EB561 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD92C890229B5A8C000EB561 /* UIButton+Extension.swift */; };
 		FDAED3AC2270C414003B2312 /* AppsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAED3AB2270C414003B2312 /* AppsController.swift */; };
 		FDAED3AF2270C54F003B2312 /* BaseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAED3AE2270C54F003B2312 /* BaseListController.swift */; };
 		FDAED3B22270C794003B2312 /* AppsGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAED3B12270C794003B2312 /* AppsGroupCell.swift */; };
@@ -45,6 +48,9 @@
 		FD70C871225BD717006E3874 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		FD70C873225BDDA1006E3874 /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		FD70C877225BE60C006E3874 /* VerticalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
+		FD92C88C229B5564000EB561 /* AppRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRowCell.swift; sourceTree = "<group>"; };
+		FD92C88E229B5A0B000EB561 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		FD92C890229B5A8C000EB561 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		FDAED3AB2270C414003B2312 /* AppsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsController.swift; sourceTree = "<group>"; };
 		FDAED3AE2270C54F003B2312 /* BaseListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListController.swift; sourceTree = "<group>"; };
 		FDAED3B12270C794003B2312 /* AppsGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsGroupCell.swift; sourceTree = "<group>"; };
@@ -158,6 +164,8 @@
 				FD70C873225BDDA1006E3874 /* UIView+Layout.swift */,
 				FD70C877225BE60C006E3874 /* VerticalStackView.swift */,
 				FDAED3B32270C997003B2312 /* UILabel+Extension.swift */,
+				FD92C88E229B5A0B000EB561 /* UIImageView+Extension.swift */,
+				FD92C890229B5A8C000EB561 /* UIButton+Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -192,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				FDAED3B12270C794003B2312 /* AppsGroupCell.swift */,
+				FD92C88C229B5564000EB561 /* AppRowCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -327,6 +336,7 @@
 				FD70C85C225BB681006E3874 /* ViewController.swift in Sources */,
 				FD70C85A225BB681006E3874 /* AppDelegate.swift in Sources */,
 				FD0BFF222268F3EB00D7220B /* SearchResult.swift in Sources */,
+				FD92C891229B5A8C000EB561 /* UIButton+Extension.swift in Sources */,
 				FDAED3AC2270C414003B2312 /* AppsController.swift in Sources */,
 				FD70C874225BDDA1006E3874 /* UIView+Layout.swift in Sources */,
 				FDAED3AF2270C54F003B2312 /* BaseListController.swift in Sources */,
@@ -334,10 +344,12 @@
 				FDAED3B22270C794003B2312 /* AppsGroupCell.swift in Sources */,
 				FD70C86F225BD334006E3874 /* AppsSearchController.swift in Sources */,
 				FD70C872225BD717006E3874 /* SearchResultCell.swift in Sources */,
+				FD92C88F229B5A0B000EB561 /* UIImageView+Extension.swift in Sources */,
 				FD0BFF262268F7D800D7220B /* APIService.swift in Sources */,
 				FDAED3B42270C997003B2312 /* UILabel+Extension.swift in Sources */,
 				FD70C878225BE60C006E3874 /* VerticalStackView.swift in Sources */,
 				FDAED3B62270CB69003B2312 /* AppsHorizontalController.swift in Sources */,
+				FD92C88D229B5564000EB561 /* AppRowCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
